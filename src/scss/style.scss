@@ -1,0 +1,27 @@
+$text:15px;
+$width:500px;
+
+@mixin border-radius($angle){
+	border-radius:$angle;
+	-webkit-border-radius:$angle;
+	-moz-border-radius:$angle;
+}
+
+body{
+	font-size:$text;
+    @include border-radius(10px);
+}
+
+#top{
+	width:$text;
+}
+
+#content{
+	width:$width;
+	height:$width*2;
+	font-size:$width/10;
+}
+
+#box{
+	@include border-radius(10px);
+}
